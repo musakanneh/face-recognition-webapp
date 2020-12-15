@@ -40,4 +40,4 @@ def gender():
 
         return render_template('gender.html', fileupload=True, img_name=filename, w=w)
 
-    return render_template('gender.html', fileupload=False, img_name="freeai.png")
+    return render_template('gender.html', fileupload=False, img_name="")
