@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block bodyblock %}
+
+<div class="container">
+    <h3>Welcome to the Gender Classification</h3>
+</div>
+
+<div class="container">
+    <br>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <label for="upload">Pease upload an image to predict your gender: </label> <br><br>
+        <input type="file" id="upload" name="image" required="true">
+        <input type="submit" value="See Prediction">
+    </form>
+
+</div>
+
+{% if fileupload %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" id="predict">
+            <img src="{{ url_for('static',filename='uploads/')}}{{ img_name }}" alt="" width="{{ w }}" height="300">
+        </div>
+        <div class="col-md-6" id="predict">
+            <img src="{{ url_for('static',filename='predict/')}}{{ img_name }}" alt="" width="{{ w }}" height="300">
+        </div>
+    </div>
+</div>
+
+<style>
+    #predict {
+        border: solid;
+        color: #002f4d;
+        text-align: center;
+    }
+</style>
+
+{% endif %} {% endblock %}

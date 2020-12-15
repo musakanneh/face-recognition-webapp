@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <title>MyFaceApp</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="{{ url_for('index') }}">Home<span
+                            class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="{{ url_for('faceapp') }}">My Face App</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    {% block bodyblock %} {% endblock %}
+
+    <footer class="footer">
+        <div class="container">
+            <p align="center">
+                <span>
+                    Made by: Musa S. Kanneh
+                </span> <br> <span>Computer Science student:</span>
+                <a href="https://www.alueducation.com/">African Leadership University</a><br>
+            </p>
+        </div>
+    </footer>
+
+    <style>
+        span {
+            color: #fff;
+        }
+        
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #002f4d;
+            padding-top: 40px;
+            padding-bottom: 20px;
+        }
+        
+        .container {}
+    </style>
+</body>
+
+</html>

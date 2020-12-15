@@ -1,1 +1,2 @@
-# face-recognition-webapp
+# Face Recognition Web Application
+![Optional Text](./images/phyta.png)
