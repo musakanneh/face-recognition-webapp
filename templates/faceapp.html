@@ -1,23 +1,41 @@
 {% extends 'base.html' %} {% block bodyblock %}
 <div class="container">
+    <div>
     <br>
     <h3 class="content">Gender Classification Web Application</h3>
+    <br>
     <p class="content">
         This app is driven by data and machine learning model. As soon as user upload the image,
     </p>
     <p> in background it convert into grayscale, crop face, convert into eigen image and finally it model to predict.
     </p>
     <p>All this functionality dumped in the flask app.</p>
-    <hr>
+    <br>
+     <div align="">
+        <a class="btn-button" href="{{ url_for('gender') }}">Click to predict pour gender</a>
+    </div>
+    </div>
+    <div>
     <img src="{{ url_for('static',filename='images/002.PNG') }}" alt="" width="600" height="230">
     <br><br>
-    <div align="center">
-        <a class="btn btn-outline-primary" style="border: 1px solid #002f4d83; background-color:#002f4d; color:#fff" href="{{ url_for('gender') }}">Predict Your Gender</a>
-    </div>
-
+</div>
     <style>
         .container {
+            margin-top: 2%;
+            display: flex;
+        }
+           .btn-button{
             text-align: center;
+            color: #fff;
+            padding: 10px;
+            border: 3px solid #002f4d;
+            margin: 5px 2px;
+            outline: none;
+            background-color: #002f4d;
+        }
+         .btn-button:hover{
+                background-color: #002f4d;
+                transition: 1s ease;
         }
     </style>
 

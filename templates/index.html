@@ -5,9 +5,28 @@
     <h3 class="content"> Welcome to <span style="color:#198b90"> My Face Recognition Web App</span></h3>
     <br>
     <p>
-        This web app uses a machine learning model <br> that accepts an image upload and automatically detect faces and classify genders, <br> irrespective of colors.
+        This web app uses a machine learning model that accepts an image upload <br> and automatically detect faces and classify genders, irrespective of colors.
     </p>
-
+     <img src="{{ url_for('static',filename='images/002.PNG') }}" alt="" width="600" height="230">
+    <br>
+<div align="">
+        <a class="btn-button" href="{{ url_for('gender') }}">Explore app</a>
+    </div>
+<style>
+	 .btn-button{
+            text-align: center;
+            color: #fff;
+            padding: 10px;
+            border: 3px solid #002f4d;
+            margin: 5px 2px;
+            outline: none;
+            background-color: #002f4d;
+        }
+         .btn-button:hover{
+                background-color: #002f4d;
+                transition: 1s ease;
+        }
+</style>
 </div>
 
 {% endblock %}
