@@ -1,34 +1,55 @@
 {% extends 'base.html' %} {%block bodyblock %}
 
-<div class="container">
-    <div>
-        <br><br>
-        <h3 class="content"> Welcome to <span style="color:#198b90"> My Face Recognition Web App</span></h3>
-        <br>
-        <p>
-            This web app uses a machine learning model that accepts an image upload <br> and automatically detect faces and classify genders, irrespective of colors.
-        </p>
-    </div>
-    <div>
-        <img src="{{ url_for('static',filename='images/002.PNG') }}" alt="" width="600" height="230">
-        <br>
-        <div align="">
-            <a class="btn-button" href="{{ url_for('gender') }}">Explore app</a>
-        </div>
-    </div>
+<Body>
+    <main>
+        <article>
+            <h3 class="content"> Welcome to <br> <span style="color:#002f4d"> My Face Recognition Web App</span></h3>
+            <p>
+                This web app uses a machine learning model that accepts an image upload and automatically detect faces and classify genders, irrespective of colors.
+            </p>
+            <br>
+            <div align="">
+                <a class="btn-button" href="{{ url_for('gender') }}">Explore the App</a>
+            </div>
+        </article>
+        <aside>
+            <img src="{{ url_for('static',filename='images/002.PNG') }}" alt="" width="600" height="230">
+        </aside>
+    </main>
     <style>
-        .container {
+        main {
             display: flex;
+            width: 95%;
+            margin: auto;
+        }
+        
+        article,
+        aside {
+            margin: 5%;
+        }
+        
+        article {
+            padding: 5% 4%;
+            background-color: #ffffff;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.06);
         }
         
         .btn-button {
             text-align: center;
-            color: #fff;
             padding: 10px;
-            border: 3px solid #002f4d;
+            list-style: none;
             margin: 5px 2px;
             outline: none;
             background-color: #002f4d;
+            text-decoration: none !important;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            height: 45px;
+            color: white;
+            box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17), inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+            text-align: center;
+            cursor: pointer;
         }
         
         .btn-button:hover {
@@ -36,6 +57,6 @@
             transition: 1s ease;
         }
     </style>
-</div>
+</body>
 
 {% endblock %}

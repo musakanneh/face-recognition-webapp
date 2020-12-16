@@ -11,7 +11,6 @@
         <input type="file" id="upload" name="image" required="true">
         <input type="submit" value="See Prediction">
     </form>
-
 </div>
 
 {% if fileupload %}
@@ -27,12 +26,41 @@
     </div>
 </div>
 
+
+{% endif %} 
+
+
 <style>
+    .container{
+        border: 1px solid red;
+        text-align: center;
+    }
+
+    input{
+         border: 1px solid red;
+         text-align: center;
+            padding: 10px;
+            list-style: none;
+            margin: 5px 2px;
+            outline: none;
+            background-color: #002f4d;
+            text-decoration: none !important;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            height: 45px;
+            color: white;
+            box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17), inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+            text-align: center;
+            cursor: pointer;
+    }
+
     #predict {
         border: solid;
         color: #002f4d;
         text-align: center;
+        border: 1px solid red;
     }
 </style>
 
-{% endif %} {% endblock %}
+{% endblock %}
