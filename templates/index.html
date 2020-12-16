@@ -1,18 +1,25 @@
 {% extends 'base.html' %} {%block bodyblock %}
 
 <div class="container">
+	<div>
     <br><br>
     <h3 class="content"> Welcome to <span style="color:#198b90"> My Face Recognition Web App</span></h3>
     <br>
     <p>
         This web app uses a machine learning model that accepts an image upload <br> and automatically detect faces and classify genders, irrespective of colors.
     </p>
+    </div>
+    <div>
      <img src="{{ url_for('static',filename='images/002.PNG') }}" alt="" width="600" height="230">
     <br>
-<div align="">
+	<div align="">
         <a class="btn-button" href="{{ url_for('gender') }}">Explore app</a>
     </div>
+    </div>
 <style>
+	.container{
+		display: flex;
+	}
 	 .btn-button{
             text-align: center;
             color: #fff;
@@ -23,8 +30,8 @@
             background-color: #002f4d;
         }
          .btn-button:hover{
-                background-color: #002f4d;
-                transition: 1s ease;
+            background-color: #002f4d;
+            transition: 1s ease;
         }
 </style>
 </div>
