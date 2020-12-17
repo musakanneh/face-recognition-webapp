@@ -1,44 +1,44 @@
 {% extends 'base.html' %} {% block bodyblock %}
 
 <main>
-<div class="container">
-    <h3>Welcome to the Gender Classification Page.</h3>
-    <p>Please upload an image to predict your gender.</p>
-</div>
-<div class="container">
-    <form action="#" method="post" enctype="multipart/form-data">
-        <div>
-            <input type="file" id="upload" name="image" required="true">
-        </div>
-        <div>
-            <input type="submit" value="See Prediction">
-        </div>
-    </form>
-</div>
+    <div class="container">
+        <h3>Welcome to the Gender Classification Page.</h3>
+        <p>Please upload an image to predict your gender.</p>
+    </div>
+    <div class="container">
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div>
+                <input type="file" id="upload" name="image" required="true">
+            </div>
+            <div>
+                <input type="submit" value="See Prediction">
+            </div>
+        </form>
+    </div>
 
-{% if fileupload %}
+    {% if fileupload %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6" id="predict">
-            <img src="{{ url_for('static',filename='uploads/')}}{{ img_name }}" alt="" width="{{ w }}" height="300">
-        </div>
-        <div class="col-md-6" id="predict">
-            <img src="{{ url_for('static',filename='predict/')}}{{ img_name }}" alt="" width="{{ w }}" height="300">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" id="predict">
+                <img src="{{ url_for('static',filename='uploads/')}}{{ img_name }}" alt="" width="{{ w }}" height="300">
+            </div>
+            <div class="col-md-6" id="predict">
+                <img src="{{ url_for('static',filename='predict/')}}{{ img_name }}" alt="" width="{{ w }}" height="300">
+            </div>
         </div>
     </div>
-</div>
 
 
-{% endif %}
+    {% endif %}
 </main>
 
 <style>
     .container {
         text-align: center;
     }
-
-    main{
+    
+    main {
         padding: 5% 4%;
         background-color: #fbfbfb;
     }
@@ -71,7 +71,7 @@
         border: solid;
         color: #002f4d;
         text-align: center;
-        border: 1px solid red;
+        border: 2px solid #002f4d;
     }
 </style>
 
